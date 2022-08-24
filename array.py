@@ -2,6 +2,8 @@
 
 if __name__ == "__main__":
 
-    from array import *
-    arr1 = array("i", [2, 3, 5, 6])
-    print(arr1)
+    #from array import *
+    #arr1 = array("i", [2, 3, 5, 6])
+    #print(arr1)
+    num = 6/4
+    print(num)

@@ -7,13 +7,6 @@ def recu(check: int):
         return recu(check-1)
 
 
-def power_of_two(n):
-    if n == 0:
-        return 1
-    else:
-        power = power_of_two(n-1)
-        return power * 2
-
 
 def firstMethod():
     secondMethod()
@@ -58,12 +51,39 @@ def factorial(num: int):
     else:
         return num * factorial(num - 1)
 
+def power_of_two(n):
+    if n == 0:
+        return 1
+    else:
+        power = power_of_two(n-1)
+        return power * 2
+
+
+def check_power_of_two(num: int):
+    while num % 2 == 0:
+        num = num / 2
+
+    if num ==1:
+        return True
+    else:
+        return False
+
+
+def isPowerOfTwo(num: int) -> bool:
+    if num ==1:
+        return True
+    if num > 1:
+        return num % 2 == 0 and isPowerOfTwo(num / 2)
+    else:
+        return False
+
 
 if __name__ == '__main__':
-    print(factorial(4))
+    print(check_power_of_two(16))
+    #print(factorial(4))
     # print(fibonacci(3))
     # recu(5)
-    # print(power_of_two(4))
+    #print(power_of_two(4))
     # firstMethod()
     # pri_num(1)
 
