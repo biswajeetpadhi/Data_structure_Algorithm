@@ -70,16 +70,18 @@ def check_power_of_two(num: int):
 
 
 def isPowerOfTwo(num: int) -> bool:
-    if num ==1:
+    if num == 1:
         return True
-    if num > 1:
-        return num % 2 == 0 and isPowerOfTwo(num / 2)
+    if num > 1 and num % 2 == 0:
+        return isPowerOfTwo(int(num/2))
     else:
         return False
 
 
 if __name__ == '__main__':
-    print(check_power_of_two(16))
+    print(isPowerOfTwo(16))
+
+    # print(check_power_of_two(16))
     #print(factorial(4))
     # print(fibonacci(3))
     # recu(5)
