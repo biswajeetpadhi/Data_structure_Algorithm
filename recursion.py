@@ -1,4 +1,4 @@
-
+'''
 # recursion
 def recu(check: int):
     if check == 1:
@@ -25,15 +25,6 @@ def thirdMethod():
 
 def fourthMethod():
     print("I am the fourth Method")
-
-
-def pri_num(num: int):
-    if num == 5:
-        print(5)
-
-    else:
-        print(num)
-        pri_num(num + 1)
 
 
 def fibonacci(num: int):
@@ -76,10 +67,19 @@ def isPowerOfTwo(num: int) -> bool:
         return isPowerOfTwo(int(num/2))
     else:
         return False
+'''
+def pri_num(num: int):
+    if num == 5:
+        print(5)
+
+    else:
+        print(num)
+        pri_num(num + 1)
+
 
 
 if __name__ == '__main__':
-    print(isPowerOfTwo(16))
+    print(pri_num(16))
 
     # print(check_power_of_two(16))
     #print(factorial(4))
